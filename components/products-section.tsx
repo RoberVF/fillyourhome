@@ -8,7 +8,7 @@ const allProducts = [
   {
     id: 1,
     name: "Sofá Vintage Gris",
-    price: 450,
+    price: 110,
     image: "/vintage-gray-sofa-mid-century.jpg",
     category: "Sofás",
     rating: 4.5,
@@ -16,7 +16,7 @@ const allProducts = [
   {
     id: 2,
     name: "Mesa de Roble Macizo",
-    price: 280,
+    price: 70,
     image: "/solid-oak-dining-table.jpg",
     category: "Mesas",
     rating: 4.8,
@@ -24,7 +24,7 @@ const allProducts = [
   {
     id: 3,
     name: "Lámpara de Pie Retro",
-    price: 95,
+    price: 20,
     image: "/retro-floor-lamp-brass.jpg",
     category: "Iluminación",
     rating: 4.6,
@@ -32,7 +32,7 @@ const allProducts = [
   {
     id: 4,
     name: "Armario de Pino",
-    price: 350,
+    price: 35,
     image: "/pine-wood-cabinet-vintage.jpg",
     category: "Muebles",
     rating: 4.7,
@@ -40,7 +40,7 @@ const allProducts = [
   {
     id: 5,
     name: "Silla Eames Blanca",
-    price: 180,
+    price: 15,
     image: "/white-eames-style-chair.jpg",
     category: "Sofás",
     rating: 4.9,
@@ -48,7 +48,7 @@ const allProducts = [
   {
     id: 6,
     name: "Estantería Metálica",
-    price: 220,
+    price: 15,
     image: "/metal-industrial-shelf.jpg",
     category: "Muebles",
     rating: 4.4,
@@ -56,7 +56,7 @@ const allProducts = [
   {
     id: 7,
     name: "Espejo Marco Dorado",
-    price: 120,
+    price: 25,
     image: "/gold-frame-mirror-ornate.jpg",
     category: "Decoración",
     rating: 4.5,
@@ -64,7 +64,7 @@ const allProducts = [
   {
     id: 8,
     name: "Escritorio Madera",
-    price: 315,
+    price: 30,
     image: "/wooden-desk-home-office.jpg",
     category: "Mesas",
     rating: 4.6,

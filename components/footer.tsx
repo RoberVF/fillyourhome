@@ -37,7 +37,7 @@ export function Footer() {
           </div>
 
           {/* Contacto */}
-          <div className="space-y-4">
+          <div id="contact" className="space-y-4">
             <h4 className="font-semibold text-foreground">Contacto</h4>
             <div className="flex flex-col gap-3">
               <div className="flex items-center gap-2 text-sm text-muted-foreground">

@@ -1,6 +1,6 @@
 "use client"
 
-import { useState } from "react"
+import { useState, use } from "react"
 import { Heart, MessageSquare, Package, Phone, Mail, Star, ChevronLeft, ChevronRight } from "lucide-react"
 import Link from "next/link"
 import { Header } from "@/components/header"
@@ -11,7 +11,7 @@ const allProducts = [
   {
     id: 1,
     name: "Sofá Vintage Gris",
-    price: 450,
+    price: 110,
     image: "/vintage-gray-sofa-mid-century.jpg",
     category: "Sofás",
     rating: 4.5,
@@ -22,7 +22,7 @@ const allProducts = [
   {
     id: 2,
     name: "Mesa de Roble Macizo",
-    price: 280,
+    price: 70,
     image: "/solid-oak-dining-table.jpg",
     category: "Mesas",
     rating: 4.8,
@@ -33,7 +33,7 @@ const allProducts = [
   {
     id: 3,
     name: "Lámpara de Pie Retro",
-    price: 95,
+    price: 20,
     image: "/retro-floor-lamp-brass.jpg",
     category: "Iluminación",
     rating: 4.6,
@@ -44,7 +44,7 @@ const allProducts = [
   {
     id: 4,
     name: "Armario de Pino",
-    price: 350,
+    price: 35,
     image: "/pine-wood-cabinet-vintage.jpg",
     category: "Muebles",
     rating: 4.7,
@@ -55,7 +55,7 @@ const allProducts = [
   {
     id: 5,
     name: "Silla Eames Blanca",
-    price: 180,
+    price: 15,
     image: "/white-eames-style-chair.jpg",
     category: "Sofás",
     rating: 4.9,
@@ -66,7 +66,7 @@ const allProducts = [
   {
     id: 6,
     name: "Estantería Metálica",
-    price: 220,
+    price: 15,
     image: "/metal-industrial-shelf.jpg",
     category: "Muebles",
     rating: 4.4,
@@ -77,7 +77,7 @@ const allProducts = [
   {
     id: 7,
     name: "Espejo Marco Dorado",
-    price: 120,
+    price: 25,
     image: "/gold-frame-mirror-ornate.jpg",
     category: "Decoración",
     rating: 4.5,
@@ -88,7 +88,7 @@ const allProducts = [
   {
     id: 8,
     name: "Escritorio Madera",
-    price: 315,
+    price: 30,
     image: "/wooden-desk-home-office.jpg",
     category: "Mesas",
     rating: 4.6,
@@ -98,7 +98,8 @@ const allProducts = [
   },
 ]
 
-export default function ProductDetail({ params }: { params: { id: string } }) {
+export default function ProductDetail({ params: paramsPromise }: { params: Promise<{id: string}> }) {
+  const params = use(paramsPromise)
   const product = allProducts.find((p) => p.id === Number.parseInt(params.id))
   const [currentImageIndex, setCurrentImageIndex] = useState(0)
   const [isFavorite, setIsFavorite] = useState(false)
@@ -141,7 +142,7 @@ export default function ProductDetail({ params }: { params: { id: string } }) {
               Inicio
             </Link>
             <span>/</span>
-            <Link href="#tienda" className="hover:text-foreground">
+            <Link href="/#tienda" className="hover:text-foreground">
               Tienda
             </Link>
             <span>/</span>
@@ -179,9 +180,8 @@ export default function ProductDetail({ params }: { params: { id: string } }) {
                   <button
                     key={index}
                     onClick={() => setCurrentImageIndex(index)}
-                    className={`w-20 h-20 rounded-lg overflow-hidden border-2 transition-colors ${
-                      index === currentImageIndex ? "border-primary" : "border-border"
-                    }`}
+                    className={`w-20 h-20 rounded-lg overflow-hidden border-2 transition-colors ${index === currentImageIndex ? "border-primary" : "border-border"
+                      }`}
                   >
                     <img
                       src={image || "/placeholder.svg"}
