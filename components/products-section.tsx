@@ -95,8 +95,8 @@ export function ProductsSection() {
     <section id="tienda" className="py-16 md:py-24 bg-background">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="mb-12">
-          <h2 className="text-3xl md:text-4xl font-serif font-bold text-foreground mb-3">Nuestros Muebles</h2>
-          <p className="text-muted-foreground">Descubre nuestra selección actualizada de muebles de segunda mano</p>
+          <h2 className="text-3xl md:text-4xl font-serif font-bold text-foreground mb-3">Our furnitures</h2>
+          <p className="text-muted-foreground">Discover our updated selection of second-hand furniture</p>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
@@ -141,8 +141,8 @@ export function ProductsSection() {
         </div>
 
         <div className="mt-8 text-center text-sm text-muted-foreground">
-          Mostrando {startIndex + 1} - {Math.min(endIndex, allProducts.length)} de {allProducts.length} productos |
-          Página {currentPage} de {totalPages}
+          Showing {startIndex + 1} - {Math.min(endIndex, allProducts.length)} of {allProducts.length} products |
+          Page {currentPage} of {totalPages}
         </div>
       </div>
     </section>
