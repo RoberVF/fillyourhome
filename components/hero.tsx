@@ -32,7 +32,8 @@ export function Hero() {
 
           <div className="relative h-80 md:h-96 bg-muted rounded-2xl overflow-hidden">
             <img
-              src="/elegant-second-hand-furniture-setup-minimal-aesthe.jpg"
+              // src="/elegant-second-hand-furniture-setup-minimal-aesthe.jpg"
+              src="/icon.jpeg"
               alt="Muebles de segunda mano elegantes"
               className="w-full h-full object-cover"
             />
