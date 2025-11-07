@@ -2,7 +2,7 @@
 
 **Fill Your Home** es una tienda de muebles de segunda mano con enfoque en la sostenibilidad y el diseño. Exploramos y restauramos piezas únicas para que cada hogar esté lleno de historia y carácter.
 
-Esta aplicación web fue diseñada en v0.dev y construida con **Next.js** y **Tailwind CSS**.
+Esta aplicación web fue diseñada y construida con **Next.js** y **Tailwind CSS**.
 
 ## 🚀 Puesta en Marcha
 
