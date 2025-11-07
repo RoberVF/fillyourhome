@@ -7,66 +7,66 @@ import { ChevronLeft, ChevronRight } from "lucide-react"
 const allProducts = [
   {
     id: 1,
-    name: "Sofá Vintage Gris",
+    name: "Grey Vintage Sofa",
     price: 110,
     image: "/vintage-gray-sofa-mid-century.jpg",
-    category: "Sofás",
+    category: "Sofas",
     rating: 4.5,
   },
   {
     id: 2,
-    name: "Mesa de Roble Macizo",
+    name: "Solid Oak Dining Table",
     price: 70,
     image: "/solid-oak-dining-table.jpg",
-    category: "Mesas",
+    category: "Tables",
     rating: 4.8,
   },
   {
     id: 3,
-    name: "Lámpara de Pie Retro",
+    name: "Retro Floor Lamp",
     price: 20,
     image: "/retro-floor-lamp-brass.jpg",
-    category: "Iluminación",
+    category: "Lightning",
     rating: 4.6,
   },
   {
     id: 4,
-    name: "Armario de Pino",
+    name: "Pine Wardrobe",
     price: 35,
     image: "/pine-wood-cabinet-vintage.jpg",
-    category: "Muebles",
+    category: "Furniture",
     rating: 4.7,
   },
   {
     id: 5,
-    name: "Silla Eames Blanca",
+    name: "White Eames Chair",
     price: 15,
     image: "/white-eames-style-chair.jpg",
-    category: "Sofás",
+    category: "Sofas",
     rating: 4.9,
   },
   {
     id: 6,
-    name: "Estantería Metálica",
+    name: "Metal Shelving",
     price: 15,
     image: "/metal-industrial-shelf.jpg",
-    category: "Muebles",
+    category: "Furniture",
     rating: 4.4,
   },
   {
     id: 7,
-    name: "Espejo Marco Dorado",
+    name: "Golden Frame Mirror",
     price: 25,
     image: "/gold-frame-mirror-ornate.jpg",
-    category: "Decoración",
+    category: "Decoration",
     rating: 4.5,
   },
   {
     id: 8,
-    name: "Escritorio Madera",
+    name: "Wooden Desk",
     price: 30,
     image: "/wooden-desk-home-office.jpg",
-    category: "Mesas",
+    category: "Tables",
     rating: 4.6,
   },
 ]
@@ -120,11 +120,10 @@ export function ProductsSection() {
               <button
                 key={page}
                 onClick={() => setCurrentPage(page)}
-                className={`inline-flex items-center justify-center w-10 h-10 rounded-lg font-medium transition-colors ${
-                  currentPage === page
-                    ? "bg-primary text-primary-foreground"
-                    : "border border-border text-foreground hover:bg-muted"
-                }`}
+                className={`inline-flex items-center justify-center w-10 h-10 rounded-lg font-medium transition-colors ${currentPage === page
+                  ? "bg-primary text-primary-foreground"
+                  : "border border-border text-foreground hover:bg-muted"
+                  }`}
               >
                 {page}
               </button>

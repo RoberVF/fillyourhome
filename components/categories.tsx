@@ -5,30 +5,30 @@ import { Sofa, Table, Lamp, Frame } from "lucide-react"
 const categories = [
   {
     id: 1,
-    name: "Sofás & Sillas",
+    name: "Sofas & Chairs",
     icon: Sofa,
-    description: "Cómodos sofás y sillas",
-    count: 24,
+    description: "Comfortable sofas and chairs",
+    count: 2,
   },
   {
     id: 2,
-    name: "Mesas",
+    name: "Tables",
     icon: Table,
-    description: "Mesas para comedor",
-    count: 18,
+    description: "Dining tables",
+    count: 3,
   },
   {
     id: 3,
-    name: "Iluminación",
+    name: "Lightning",
     icon: Lamp,
-    description: "Lámparas y accesorios",
+    description: "Lamps and accessories",
     count: 12,
   },
   {
     id: 4,
-    name: "Decoración",
+    name: "Decoration",
     icon: Frame,
-    description: "Cuadros y adornos",
+    description: "Pictures and decorations",
     count: 31,
   },
 ]
@@ -38,8 +38,8 @@ export function Categories() {
     <section className="py-16 md:py-24 bg-background">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-12">
-          <h2 className="text-3xl md:text-4xl font-serif font-bold text-foreground mb-3">Categorías</h2>
-          <p className="text-muted-foreground">Explora nuestras colecciones organizadas por categoría</p>
+          <h2 className="text-3xl md:text-4xl font-serif font-bold text-foreground mb-3">Categories</h2>
+          <p className="text-muted-foreground">Explore our collections organized by category</p>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
@@ -55,7 +55,7 @@ export function Categories() {
                 </div>
                 <h3 className="font-semibold text-foreground mb-1">{category.name}</h3>
                 <p className="text-sm text-muted-foreground mb-3">{category.description}</p>
-                <span className="text-xs font-medium text-primary">{category.count} productos</span>
+                <span className="text-xs font-medium text-primary">{category.count} products</span>
               </button>
             )
           })}

@@ -8,10 +8,10 @@ export function Header() {
   const [isOpen, setIsOpen] = useState(false)
 
   const navItems = [
-    { label: "Inicio", href: "/#" },
-    { label: "Tienda", href: "/#tienda" },
-    { label: "Sobre Nosotros", href: "/#about" },
-    { label: "Contacto", href: "/#contact" },
+    { label: "Home", href: "/#" },
+    { label: "Shop", href: "/#tienda" },
+    { label: "About us", href: "/#about" },
+    { label: "Contact", href: "/#contact" },
   ]
 
   return (

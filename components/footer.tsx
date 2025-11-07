@@ -14,31 +14,28 @@ export function Footer() {
               </div>
               <span className="font-serif text-lg font-semibold text-primary">Fill Your Home</span>
             </Link>
-            <p className="text-sm text-muted-foreground">Muebles únicos con historias, para un hogar más sostenible.</p>
+            <p className="text-sm text-muted-foreground">Unique furniture with stories, for a more sustainable home</p>
           </div>
 
           {/* Enlaces Rápidos */}
           <div className="space-y-4">
-            <h4 className="font-semibold text-foreground">Enlaces</h4>
+            <h4 className="font-semibold text-foreground">Links</h4>
             <div className="flex flex-col gap-2">
-              <Link href="#" className="text-sm text-muted-foreground hover:text-primary transition-colors">
-                Inicio
+              <Link href="/#" className="text-sm text-muted-foreground hover:text-primary transition-colors">
+                Home
               </Link>
-              <Link href="#tienda" className="text-sm text-muted-foreground hover:text-primary transition-colors">
-                Tienda
+              <Link href="/#tienda" className="text-sm text-muted-foreground hover:text-primary transition-colors">
+                Shop
               </Link>
-              <Link href="#" className="text-sm text-muted-foreground hover:text-primary transition-colors">
-                Blog
-              </Link>
-              <Link href="#" className="text-sm text-muted-foreground hover:text-primary transition-colors">
-                Política de Privacidad
+              <Link href="/#about" className="text-sm text-muted-foreground hover:text-primary transition-colors">
+                About us
               </Link>
             </div>
           </div>
 
           {/* Contacto */}
           <div id="contact" className="space-y-4">
-            <h4 className="font-semibold text-foreground">Contacto</h4>
+            <h4 className="font-semibold text-foreground">Contact</h4>
             <div className="flex flex-col gap-3">
               <div className="flex items-center gap-2 text-sm text-muted-foreground">
                 <Phone className="w-4 h-4" />
@@ -50,14 +47,14 @@ export function Footer() {
               </div>
               <div className="flex items-center gap-2 text-sm text-muted-foreground">
                 <MapPin className="w-4 h-4" />
-                <span>Madrid, España</span>
+                <span>Las Palmas de Gran Canaria, España</span>
               </div>
             </div>
           </div>
 
           {/* Redes Sociales */}
           <div className="space-y-4">
-            <h4 className="font-semibold text-foreground">Síguenos</h4>
+            <h4 className="font-semibold text-foreground">Follow us!</h4>
             <div className="flex gap-3">
               <button className="p-2 bg-muted hover:bg-primary hover:text-primary-foreground rounded-lg transition-colors">
                 <Instagram className="w-5 h-5" />
@@ -73,16 +70,8 @@ export function Footer() {
         </div>
 
         <div className="border-t border-border pt-8">
-          <div className="flex flex-col md:flex-row justify-between items-center gap-4 text-sm text-muted-foreground">
-            <p>&copy; 2025 Fill Your Home. Todos los derechos reservados.</p>
-            <div className="flex gap-6">
-              <Link href="#" className="hover:text-primary transition-colors">
-                Términos de Servicio
-              </Link>
-              <Link href="#" className="hover:text-primary transition-colors">
-                Política de Cookies
-              </Link>
-            </div>
+          <div className="flex justify-center md:flex-row items-center text-sm text-muted-foreground">
+            <p>&copy; 2025 Fill Your Home. All rights reserved.</p>
           </div>
         </div>
       </div>

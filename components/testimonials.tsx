@@ -3,27 +3,27 @@ import { Star } from "lucide-react"
 const testimonials = [
   {
     id: 1,
-    name: "María García",
-    role: "Cliente desde 2022",
+    name: "Manuela Castellano",
+    role: "Client since 2022",
     content:
-      "Encontré el sofá perfecto para mi sala. La calidad es excelente y el precio es muy justo. Recomiendo Fill Your Home a todos mis amigos.",
+      "I found the perfect sofa for my living room. The quality is excellent and the price is very fair.",
     rating: 5,
     image: "/customer-avatar-woman.jpg",
   },
   {
     id: 2,
-    name: "Juan López",
-    role: "Cliente desde 2023",
+    name: "Gimena Morales",
+    role: "Client since 2023",
     content:
-      "El servicio es increíble. Me ayudaron a elegir la mesa perfecta para mi comedor. Muy profesionales y atentos.",
-    rating: 5,
-    image: "/placeholder.svg?height=80&width=80",
+      "The service is incredible. They helped me choose the perfect table for my dining room. Very professional and attentive.", 
+    rating: 4,
+    image: "/customer-avatar-woman.jpg",
   },
   {
     id: 3,
-    name: "Carmen Rodríguez",
-    role: "Cliente desde 2021",
-    content: "Muebles de segunda mano con calidad de primero. He comprado varias piezas y todas me han durado años.",
+    name: "Carmen Ojeda",
+    role: "Client since 2021",
+    content: "Second-hand furniture of first-rate quality. I've bought several pieces and they've all lasted me for years.",
     rating: 5,
     image: "/customer-avatar-woman.jpg",
   },
@@ -35,9 +35,9 @@ export function Testimonials() {
       <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-12">
           <h2 className="text-3xl md:text-4xl font-serif font-bold text-foreground mb-4">
-            Lo que dicen nuestros clientes
+            What our customers say
           </h2>
-          <p className="text-lg text-muted-foreground">Opiniones reales de personas que confían en nosotros</p>
+          <p className="text-lg text-muted-foreground">Real opinions from people who trust us</p>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">

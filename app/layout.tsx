@@ -8,9 +8,8 @@ const _geist = Geist({ subsets: ["latin"] })
 const _geistMono = Geist_Mono({ subsets: ["latin"] })
 
 export const metadata: Metadata = {
-  title: "Fill Your Home - Muebles de Segunda Mano",
-  description: "Descubre muebles únicos y sostenibles para tu hogar",
-  generator: "v0.app",
+  title: "Fill Your Home - Second hand furnitures",
+  description: "Discover unique and sustainable furniture for your home",
   icons: {
     icon: [
       {

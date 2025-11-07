@@ -10,90 +10,90 @@ import { Footer } from "@/components/footer"
 const allProducts = [
   {
     id: 1,
-    name: "Sofá Vintage Gris",
+    name: "Grey Vintage Sofa",
     price: 110,
     image: "/vintage-gray-sofa-mid-century.jpg",
-    category: "Sofás",
+    category: "Sofas",
     rating: 4.5,
     stock: 3,
-    description: "Hermoso sofá vintage de estilo mid-century. Perfecto para agregar carácter a tu sala de estar.",
+    description: "Beautiful mid-century style vintage sofa. Perfect for adding character to your living room.",
     images: ["/vintage-gray-sofa-mid-century.jpg", "/vintage-gray-sofa.jpg", "/sofa-details.jpg"],
   },
   {
     id: 2,
-    name: "Mesa de Roble Macizo",
+    name: "Solid Oak Dining Table",
     price: 70,
     image: "/solid-oak-dining-table.jpg",
-    category: "Mesas",
+    category: "Tables",
     rating: 4.8,
     stock: 2,
-    description: "Mesa de comedor en roble macizo con acabado natural. Ideal para familias grandes.",
+    description: "Solid oak dining table with a natural finish. Ideal for large families.",
     images: ["/solid-oak-dining-table.jpg", "/rustic-oak-table.png", "/wooden-table-details.jpg"],
   },
   {
     id: 3,
-    name: "Lámpara de Pie Retro",
+    name: "Retro Floor Lamp",
     price: 20,
     image: "/retro-floor-lamp-brass.jpg",
-    category: "Iluminación",
+    category: "Lightning",
     rating: 4.6,
     stock: 5,
-    description: "Lámpara de pie retro con estructura de latón. Perfecta para crear una atmósfera acogedora.",
+    description: "Retro floor lamp with a brass frame. Perfect for creating a cozy atmosphere.",
     images: ["/retro-floor-lamp-brass.jpg", "/brass-floor-lamp.png", "/lamp-details.jpg"],
   },
   {
     id: 4,
-    name: "Armario de Pino",
+    name: "Pine Wardrobe",
     price: 35,
     image: "/pine-wood-cabinet-vintage.jpg",
-    category: "Muebles",
+    category: "Furniture",
     rating: 4.7,
     stock: 1,
-    description: "Armario vintage de madera de pino con mucho carácter. Ideal para almacenamiento decorativo.",
+    description: "Vintage pine wood cabinet with lots of character. Ideal for decorative storage.",
     images: ["/pine-wood-cabinet-vintage.jpg", "/pine-cabinet-vintage.jpg", "/cabinet-details.jpg"],
   },
   {
     id: 5,
-    name: "Silla Eames Blanca",
+    name: "White Eames Chair",
     price: 15,
     image: "/white-eames-style-chair.jpg",
-    category: "Sofás",
+    category: "Sofas",
     rating: 4.9,
     stock: 4,
-    description: "Silla estilo Eames en color blanco. Clásica y versátil para cualquier espacio.",
+    description: "Eames-style chair in white. Classic and versatile for any space.",
     images: ["/white-eames-style-chair.jpg", "/eames-style-white-chair.jpg", "/chair-details.jpg"],
   },
   {
     id: 6,
-    name: "Estantería Metálica",
+    name: "Metal Shelving",
     price: 15,
     image: "/metal-industrial-shelf.jpg",
-    category: "Muebles",
+    category: "Furniture",
     rating: 4.4,
     stock: 2,
-    description: "Estantería de estilo industrial con estructura de metal. Perfecta para espacios modernos.",
+    description: "Industrial-style shelving unit with a metal frame. Perfect for modern spaces.",
     images: ["/metal-industrial-shelf.jpg", "/industrial-metal-shelf.jpg", "/shelf-details.jpg"],
   },
   {
     id: 7,
-    name: "Espejo Marco Dorado",
+    name: "Golden Frame Mirror",
     price: 25,
     image: "/gold-frame-mirror-ornate.jpg",
-    category: "Decoración",
+    category: "Decoration",
     rating: 4.5,
     stock: 6,
-    description: "Espejo decorativo con marco dorado ornamentado. Ideal para agregar luz y elegancia.",
+    description: "Decorative mirror with ornate gold frame. Ideal for adding light and elegance.",
     images: ["/gold-frame-mirror-ornate.jpg", "/gold-frame-mirror.jpg", "/mirror-details.jpg"],
   },
   {
     id: 8,
-    name: "Escritorio Madera",
+    name: "Wooden Desk",
     price: 30,
     image: "/wooden-desk-home-office.jpg",
-    category: "Mesas",
+    category: "Tables",
     rating: 4.6,
     stock: 2,
-    description: "Escritorio de madera sólida para home office. Espacio amplio y resistente.",
+    description: "Solid wood desk for home office. Spacious and sturdy.",
     images: ["/wooden-desk-home-office.jpg", "/wooden-desk-home-office.jpg", "/desk-details.jpg"],
   },
 ]
@@ -110,9 +110,9 @@ export default function ProductDetail({ params: paramsPromise }: { params: Promi
         <Header />
         <main className="flex-1 flex items-center justify-center">
           <div className="text-center py-16">
-            <h1 className="text-2xl font-bold text-foreground mb-4">Producto no encontrado</h1>
+            <h1 className="text-2xl font-bold text-foreground mb-4">Product no found!</h1>
             <Link href="/" className="text-primary hover:underline">
-              Volver al inicio
+              Return Home
             </Link>
           </div>
         </main>
@@ -139,11 +139,11 @@ export default function ProductDetail({ params: paramsPromise }: { params: Promi
           {/* Breadcrumb */}
           <div className="mb-8 flex items-center gap-2 text-sm text-muted-foreground">
             <Link href="/" className="hover:text-foreground">
-              Inicio
+              Home
             </Link>
             <span>/</span>
             <Link href="/#tienda" className="hover:text-foreground">
-              Tienda
+              Shop
             </Link>
             <span>/</span>
             <span className="text-foreground">{product.name}</span>
@@ -231,7 +231,7 @@ export default function ProductDetail({ params: paramsPromise }: { params: Promi
               {/* Precio y stock */}
               <div className="bg-muted p-6 rounded-lg mb-6">
                 <div className="mb-4">
-                  <p className="text-sm text-muted-foreground mb-2">Precio</p>
+                  <p className="text-sm text-muted-foreground mb-2">Price</p>
                   <p className="text-4xl font-bold text-primary">${product.price}</p>
                 </div>
 
@@ -239,7 +239,7 @@ export default function ProductDetail({ params: paramsPromise }: { params: Promi
                 <div className="flex items-center gap-3 mb-6 pb-6 border-b border-border">
                   <Package className="w-5 h-5 text-foreground" />
                   <div>
-                    <p className="text-sm text-muted-foreground">Stock disponible</p>
+                    <p className="text-sm text-muted-foreground">Stock not available</p>
                     <p className={`font-semibold ${product.stock > 0 ? "text-foreground" : "text-red-500"}`}>
                       {product.stock > 0 ? `${product.stock} unidades` : "Agotado"}
                     </p>
@@ -252,13 +252,13 @@ export default function ProductDetail({ params: paramsPromise }: { params: Promi
                     className="w-full py-3 bg-primary text-primary-foreground font-semibold rounded-lg hover:bg-primary/90 transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
                     disabled={product.stock === 0}
                   >
-                    Comprar ahora
+                    Shop now!
                   </button>
                   <button
                     className="w-full py-3 border border-primary text-primary font-semibold rounded-lg hover:bg-primary/10 transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
                     disabled={product.stock === 0}
                   >
-                    Reservar
+                    Reserve
                   </button>
                 </div>
               </div>
@@ -267,7 +267,7 @@ export default function ProductDetail({ params: paramsPromise }: { params: Promi
               <div className="bg-background border border-border p-6 rounded-lg">
                 <h3 className="font-semibold text-foreground mb-4 flex items-center gap-2">
                   <MessageSquare className="w-5 h-5" />
-                  Contactar con nosotros
+                  Contact us
                 </h3>
                 <div className="space-y-3">
                   <a
@@ -282,7 +282,7 @@ export default function ProductDetail({ params: paramsPromise }: { params: Promi
                     className="flex items-center gap-3 text-muted-foreground hover:text-foreground transition-colors"
                   >
                     <Mail className="w-4 h-4" />
-                    info@fillhome.com
+                    info@fillyourhome.com
                   </a>
                 </div>
               </div>
@@ -292,7 +292,7 @@ export default function ProductDetail({ params: paramsPromise }: { params: Promi
           {/* Productos similares */}
           {similarProducts.length > 0 && (
             <div>
-              <h2 className="text-2xl md:text-3xl font-serif font-bold text-foreground mb-8">Productos similares</h2>
+              <h2 className="text-2xl md:text-3xl font-serif font-bold text-foreground mb-8">Similar products</h2>
               <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
                 {similarProducts.slice(0, 3).map((prod) => (
                   <Link

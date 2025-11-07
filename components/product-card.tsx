@@ -60,7 +60,7 @@ export function ProductCard({ product }: ProductCardProps) {
             href={`/product/${product.id}`}
             className="px-4 py-2 bg-primary text-primary-foreground font-medium rounded-lg hover:bg-primary/90 transition-colors"
           >
-            Ver
+            See
           </Link>
         </div>
       </div>
