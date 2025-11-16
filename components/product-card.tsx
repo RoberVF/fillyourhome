@@ -1,8 +1,9 @@
 "use client"
 
-import { Heart, Star } from "lucide-react"
+import { Heart, Star } from 'lucide-react'
 import { useState } from "react"
 import Link from "next/link"
+import { useRouter } from 'next/navigation'
 
 interface Product {
   id: number
@@ -11,6 +12,7 @@ interface Product {
   image: string
   category: string
   rating: number
+  styles: string[]
 }
 
 interface ProductCardProps {
@@ -19,6 +21,7 @@ interface ProductCardProps {
 
 export function ProductCard({ product }: ProductCardProps) {
   const [isFavorite, setIsFavorite] = useState(false)
+  const router = useRouter()
 
   return (
     <div className="group bg-card border border-border rounded-lg overflow-hidden hover:shadow-lg transition-all duration-300">
@@ -44,6 +47,14 @@ export function ProductCard({ product }: ProductCardProps) {
       <div className="p-5">
         <h3 className="font-semibold text-foreground text-lg mb-2 line-clamp-2">{product.name}</h3>
 
+        <div className="flex flex-wrap gap-1 mb-3">
+          {product.styles.slice(0, 2).map((style) => (
+            <span key={style} className="text-xs px-2 py-0.5 bg-muted text-muted-foreground rounded-full">
+              {style}
+            </span>
+          ))}
+        </div>
+
         <div className="flex items-center gap-1 mb-3">
           {Array.from({ length: 5 }).map((_, i) => (
             <Star
@@ -56,12 +67,12 @@ export function ProductCard({ product }: ProductCardProps) {
 
         <div className="flex items-center justify-between">
           <span className="text-2xl font-bold text-primary">${product.price}</span>
-          <Link
-            href={`/product/${product.id}`}
+          <button
+            onClick={() => router.push(`/product/${product.id}`)}
             className="px-4 py-2 bg-primary text-primary-foreground font-medium rounded-lg hover:bg-primary/90 transition-colors"
           >
-            See
-          </Link>
+            View
+          </button>
         </div>
       </div>
     </div>

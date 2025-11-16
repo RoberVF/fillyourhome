@@ -2,7 +2,7 @@
 
 import { useState } from "react"
 import Link from "next/link"
-import { Menu, X, ShoppingCart, Search } from "lucide-react"
+import { Menu, X, ShoppingCart, Search, User } from "lucide-react"
 
 export function Header() {
   const [isOpen, setIsOpen] = useState(false)
@@ -49,6 +49,13 @@ export function Header() {
                 0
               </span>
             </button>
+            <Link
+              href="/profile"
+              className="p-2 text-foreground hover:bg-muted rounded-lg transition-colors hidden sm:block"
+              title="Profile"
+            >
+              <User className="w-5 h-5" />
+            </Link>
 
             <button
               onClick={() => setIsOpen(!isOpen)}
@@ -71,6 +78,13 @@ export function Header() {
                   {item.label}
                 </Link>
               ))}
+              <Link
+                href="/profile"
+                className="text-sm text-foreground hover:text-primary transition-colors px-2 py-2 flex items-center gap-2"
+              >
+                <User className="w-4 h-4" />
+                Profile
+              </Link>
             </div>
           </div>
         )}
