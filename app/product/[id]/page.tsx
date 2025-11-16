@@ -1,6 +1,6 @@
 "use client"
 
-import { useState } from "react"
+import { useState, use } from "react"
 import { Heart, MessageSquare, Package, Phone, Mail, Star, ChevronLeft, ChevronRight } from 'lucide-react'
 import Link from "next/link"
 import { Header } from "@/components/header"
@@ -9,7 +9,8 @@ import { ProductChat } from "@/components/product-chat"
 import { ARViewer } from "@/components/ar-viewer"
 import { allProducts } from "@/app/lib/product-data"
 
-export default function ProductDetail({ params }: { params: { id: string } }) {
+export default function ProductDetail({ params: paramsPromise }: { params: Promise<{id: string}> }) {
+  const params = use(paramsPromise)
   const product = allProducts.find((p) => p.id === Number.parseInt(params.id))
   const [currentImageIndex, setCurrentImageIndex] = useState(0)
   const [isFavorite, setIsFavorite] = useState(false)
@@ -90,9 +91,8 @@ export default function ProductDetail({ params }: { params: { id: string } }) {
                   <button
                     key={index}
                     onClick={() => setCurrentImageIndex(index)}
-                    className={`w-20 h-20 rounded-lg overflow-hidden border-2 transition-colors ${
-                      index === currentImageIndex ? "border-primary" : "border-border"
-                    }`}
+                    className={`w-20 h-20 rounded-lg overflow-hidden border-2 transition-colors ${index === currentImageIndex ? "border-primary" : "border-border"
+                      }`}
                   >
                     <img
                       src={image || "/placeholder.svg"}
@@ -182,7 +182,7 @@ export default function ProductDetail({ params }: { params: { id: string } }) {
                   >
                     Reserve
                   </button>
-                  
+
                   <ARViewer productName={product.name} productImage={product.image} />
                 </div>
               </div>
